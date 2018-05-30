@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: hello
+spec:
+  suspend: false # true or false
+  schedule: "*/1 * * * *"
+  startingDeadlineSeconds: 10 # grace period
+  concurrencyPolicy: Forbid # Allow, Forbid, Replace
+  successfulJobsHistoryLimit: 3 # default value
+  failedJobsHistoryLimit: 1 # default value
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: busybox
+            args:
+            - /bin/sh
+            - -c
+            - date; echo Hello World
+          restartPolicy: OnFailure
