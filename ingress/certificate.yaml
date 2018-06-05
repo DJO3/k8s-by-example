@@ -1,0 +1,21 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: pytools-org-tls
+  namespace: default
+spec:
+  secretName: pytools-org-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: hello.pytools.org
+  dnsNames:
+  - hello.pytools.org
+  acme:
+    config:
+    - http01:
+        ingress: fanout-ingress
+      domains:
+      - hello.pytools.org
+
+# --set key=value[resources=requests:{cpu:50m,memory:250Mi}]
