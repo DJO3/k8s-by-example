@@ -27,6 +27,6 @@ alias create-cluster="gcloud container clusters create dev \
 
 # functions
 function kube-access-token {
-    token=$(sed -n 's/\access-token: \(.*\)/\1/p' ~/.kube/config)
+    token=$(sed -n 's/access-token: \(.*\)/\1/p' ~/.kube/config)
     echo $token
 }   
