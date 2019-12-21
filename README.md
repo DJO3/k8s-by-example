@@ -1,10 +1,13 @@
 # k8s-by-example
-A convenient collection of Kubernetes YAML files for commonly used functions.
+All the things I have enjoyed using while working with Kubernetes.
 
 # Docs
 [CronJob](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/)
+
 [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
+
 [Kind](https://kind.sigs.k8s.io/)
+
 [Helm](https://helm.sh/docs/)
 
 # GKE
