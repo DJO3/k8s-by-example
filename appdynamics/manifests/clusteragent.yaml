@@ -1,0 +1,10 @@
+apiVersion: appdynamics.com/v1alpha1
+kind: Clusteragent
+metadata:
+  name: k8s-cluster-agent
+  namespace: appdynamics
+spec:
+  appName: "automagic"
+  controllerUrl: "https://redact.saas.appdynamics.com"
+  account: "redact"
+  image: "docker.io/appdynamics/cluster-agent:4.5.16"
