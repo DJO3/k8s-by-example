@@ -29,3 +29,6 @@ KubeDNS is running at https://127.0.0.1:45985/api/v1/namespaces/kube-system/serv
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
+
+# Credit
+[Kind Ingress Docs](https://kind.sigs.k8s.io/docs/user/ingress/)
